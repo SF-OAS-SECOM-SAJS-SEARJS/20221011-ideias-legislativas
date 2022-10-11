@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="pt">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document Title</title>
+    <script src="chart.js"></script>
+    <script src="chartjs-plugin-datalabels.min.js"></script>
+
+</head>
+
+<body style="background-color: #E5E5E5; ">
+    <canvas id="myChart" width="160" height="90"></canvas>
+    <script>
+        Chart.defaults.font.family = "Lucida Sans Unicode,Lucida Grande,sans-serif";
+        Chart.defaults.font.size = 14;
+        Chart.defaults.color = '#000';
+        const ctx = document.getElementById('myChart');
+        const myChart = new Chart(ctx, {
+            type: 'bar',
+            data: {
+                labels: ['Direitos Humanos', 'Saúde', 'Educação', 'Meio ambiente', 'Economia', 'Política externa', 'Segurança pública'],
+                datasets: [{
+                    //label: '',
+                    data: [142, 138, 218, 69, 80, 20, 101],
+                    backgroundColor: [
+                        'rgba(0,92,158, 1)',
+                    ],
+                    borderWidth: 0,
+                    borderRadius: 10,
+                },]
+            },
+            options: {
+                layout: {
+                    padding: 0,
+                },
+                locale: 'pt-BR',
+                indexAxis: 'y',
+                scales: {
+                    x: {
+                        grid: {
+                            display: true,
+                            drawTicks: false,
+                            drawBorder: false,
+                            color: '#b4b4b4',
+                            borderDash: [2],
+                        },
+                        ticks: {
+                            display: true,
+                            color: '#b4b4b4',
+                        },
+                    },
+                    y: {
+                        grid: {
+                            borderWidth: 2,
+                            borderColor: '#000',
+                            display: false,
+                        },
+                        ticks: {
+                            padding: 0,
+                        },
+                    },
+                },
+                plugins: {
+                    legend: {
+                        display: false,
+                    },
+                    tooltip: {
+                        padding: 10,
+                        backgroundColor: '#FFF',
+                        borderWidth: 1,
+                        borderColor: '#000',
+                        displayColors: false,
+                        titleFont: {
+                            size: 14,
+                        },
+                        titleColor: '#000',
+                        bodyFont: {
+                            size: 16,
+                        },
+                        bodyColor: '#000',
+                    },
+                },
+            },
+        });
+    </script>
+</body>
+
+</html>
