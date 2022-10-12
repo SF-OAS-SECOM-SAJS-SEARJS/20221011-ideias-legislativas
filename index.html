@@ -48,16 +48,17 @@
               ticks: {
                 display: true,
                 color: "#b4b4b4",
+                padding: 5,
               },
             },
-            xy: {
+            x: {
               grid: {
                 borderWidth: 2,
                 borderColor: "#000",
                 display: false,
               },
               ticks: {
-                padding: 0,
+                padding: -3,
               },
             },
           },
@@ -80,13 +81,18 @@
               },
               bodyColor: "#000",
             },
-            annotations: {
-              label1: {
-                type: "label",
-                xValue: 2500,
-                yValue: 15000,
-                backgroundColor: "rgba(245,245,245)",
-                content: ["Nonono"],
+            annotation: {
+              annotations: {
+                label1: {
+                  type: "label",
+                  xValue: 9,
+                  yValue: 20000,
+                  backgroundColor: "rgba(245,245,245)",
+                  content: ["Foram apresentadas,", "em média,", "800", "ideias legislativas", "por mês em 2022"],
+                  font: {
+                    size: 16,
+                  },
+                },
               },
             },
           },
