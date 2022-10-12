@@ -6,11 +6,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Ideias legislativas</title>
     <script src="chart.js"></script>
-    <script src="chartjs-plugin-annotation.min.js"></script>
   </head>
 
   <body style="background-color: #e5e5e5">
-    <canvas id="myChart" width="400" height="300"></canvas>
+    <canvas id="myChart" width="160" height="90"></canvas>
     <script>
       Chart.defaults.font.family = "Lucida Sans Unicode,Lucida Grande,sans-serif";
       Chart.defaults.font.size = 14;
@@ -80,20 +79,6 @@
                 size: 16,
               },
               bodyColor: "#000",
-            },
-            annotation: {
-              annotations: {
-                label1: {
-                  type: "label",
-                  xValue: 9,
-                  yValue: 23000,
-                  backgroundColor: "rgba(245,245,245)",
-                  content: ["Foram apresentadas,", "em média,", "800", "ideias legislativas", "por mês em 2022"],
-                  font: {
-                    size: 14,
-                  },
-                },
-              },
             },
           },
         },
